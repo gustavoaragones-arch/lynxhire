@@ -11,6 +11,20 @@
   --muted-foreground: #737373;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
+
+  /* Sidebar */
+  --sidebar-bg: #0b0c0e;
+  --sidebar-accent: #1e2126;
+  --sidebar-text: rgba(255, 255, 255, 0.7);
+  --sidebar-text-active: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+
+  /* AI highlight */
+  --ai-highlight: #3dd6d0;
+
+  /* Success */
+  --success: #1f3d2b;
+  --success-foreground: #4ade80;
 }
 
 @theme {
@@ -24,6 +38,9 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-ai-highlight: var(--ai-highlight);
   --font-family-heading: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
 }
 
