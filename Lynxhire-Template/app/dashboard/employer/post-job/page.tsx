@@ -1,4 +1,5 @@
 import { DashboardHeader } from "@/components/dashboard/header";
+import { PostJobForm } from "@/components/dashboard/post-job-form";
 
 export default function PostJobPage() {
   return (
@@ -7,11 +8,7 @@ export default function PostJobPage() {
         title="Post a Job"
         subtitle="Create a new job listing"
       />
-      <main className="flex-1 p-6">
-        <p className="text-muted-foreground">
-          AI job posting form — coming in Prompt 5
-        </p>
-      </main>
+      <PostJobForm />
     </>
   );
 }
