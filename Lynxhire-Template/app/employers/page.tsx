@@ -1,0 +1,9 @@
+export default function EmployersPage() {
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <p className="text-muted-foreground text-lg">
+        For Employers — Coming in Phase 2
+      </p>
+    </main>
+  );
+}
