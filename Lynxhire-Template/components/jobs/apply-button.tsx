@@ -80,18 +80,31 @@ export function ApplyButton({
     setError(null);
 
     const supabase = createClient();
-    const { error: insertError } = await supabase.from("applications").insert({
-      job_id: jobId,
-      candidate_id: userId,
-      resume_url: resumeUrl,
-      cover_letter: coverLetter || null,
-      status: "new",
-    });
+    const { data: insertedApp, error: insertError } = await supabase
+      .from("applications")
+      .insert({
+        job_id: jobId,
+        candidate_id: userId,
+        resume_url: resumeUrl,
+        cover_letter: coverLetter || null,
+        status: "new",
+      })
+      .select("id")
+      .single();
 
     if (insertError) {
       setError(insertError.message);
       setLoading(false);
       return;
+    }
+
+    // Fire-and-forget AI match scoring (non-blocking)
+    if (insertedApp?.id) {
+      fetch("/api/ai/match-score", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ applicationId: insertedApp.id }),
+      }).catch(() => {}); // Ignore errors — scoring is best-effort
     }
 
     setSuccess(true);
