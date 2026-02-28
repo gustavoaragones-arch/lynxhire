@@ -1,16 +1,31 @@
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
+import { BillingClient } from "@/components/dashboard/billing-client";
 
-export default function BillingPage() {
+export default async function BillingPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/auth/login");
+
+  const { data: subscription } = await supabase
+    .from("subscriptions")
+    .select(
+      "plan, status, current_period_end, stripe_customer_id, stripe_subscription_id"
+    )
+    .eq("profile_id", user.id)
+    .single();
+
   return (
     <>
       <DashboardHeader
         title="Billing"
-        subtitle="Manage your subscription"
+        subtitle="Manage your LynxHire subscription"
       />
-      <main className="flex-1 p-6">
-        <p className="text-muted-foreground">
-          Stripe billing — coming in Prompt 7
-        </p>
+      <main className="flex-1 p-6 max-w-3xl">
+        <BillingClient subscription={subscription} />
       </main>
     </>
   );
