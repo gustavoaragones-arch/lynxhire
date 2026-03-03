@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd lynxhire && npm run build",
+  "outputDirectory": "lynxhire/.next",
+  "installCommand": "cd lynxhire && npm install",
+  "devCommand": "cd lynxhire && npm run dev",
+  "framework": "nextjs"
+}
