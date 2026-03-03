@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import { ApplyButton } from "@/components/jobs/apply-button";
@@ -9,6 +10,34 @@ import {
   DollarSign,
   Building2,
 } from "lucide-react";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const supabase = await createClient();
+  const { data: job } = await supabase
+    .from("job_postings")
+    .select("title, description, city, province, companies(name)")
+    .eq("id", id)
+    .single();
+
+  if (!job) return { title: "Job Not Found" };
+
+  const company = Array.isArray(job.companies) ? job.companies[0] : job.companies;
+  const location = [job.city, job.province].filter(Boolean).join(", ");
+
+  return {
+    title: `${job.title} at ${company?.name ?? "Company"}`,
+    description: `${job.title} position${location ? ` in ${location}` : ""} at ${company?.name ?? "a Canadian company"}. Apply now on LynxHire.`,
+    openGraph: {
+      title: `${job.title} — ${company?.name ?? "LynxHire"}`,
+      description: job.description?.slice(0, 160) ?? "",
+    },
+  };
+}
 
 export default async function JobPage({
   params,

@@ -2,6 +2,12 @@ import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { MapPin, Briefcase } from "lucide-react";
 
+export const metadata = {
+  title: "Browse Jobs in Canada",
+  description:
+    "Search thousands of job listings across Canada. Filter by location, work type, salary, and more. Updated daily.",
+};
+
 export default async function PublicJobsPage() {
   const supabase = await createClient();
   const { data: jobs } = await supabase
