@@ -11,18 +11,18 @@ import {
 export function Footer() {
   const platform = [
     { title: "Browse Jobs", href: "/jobs" },
-    { title: "Post a Job", href: "/employers" },
+    { title: "Post a Job", href: "/for-employers" },
     { title: "Pricing", href: "/pricing" },
-    { title: "For Employers", href: "/employers" },
+    { title: "For Employers", href: "/for-employers" },
     { title: "How It Works", href: "/#product" },
   ];
 
   const company = [
-    { title: "About LynxHire", href: "/#home" },
+    { title: "About LynxHire", href: "/about" },
     { title: "Blog", href: "/blog" },
-    { title: "Contact", href: "/#home" },
-    { title: "Careers", href: "/#home" },
-    { title: "Press", href: "/#home" },
+    { title: "Contact", href: "/contact" },
+    { title: "Careers", href: "/careers" },
+    { title: "Press", href: "/press" },
   ];
 
   const legal = [
@@ -96,9 +96,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-16 max-w-xs mx-auto">
-          <p className="text-sm text-muted-foreground">© 2026 LynxHire | Albor Digital LLC | Built for Canada 🇨🇦</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
+        {/* Bottom bar */}
+        <div className="border-t border-border mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+          <span>© 2026 LynxHire | Albor Digital LLC</span>
+          <div className="flex items-center gap-4">
             <Link
               href="#"
               className="text-muted-foreground hover:text-foreground"

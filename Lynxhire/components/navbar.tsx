@@ -23,7 +23,7 @@ interface NavbarProps {
 export const Navbar = () => {
   const navItems = [
     { name: "Browse Jobs", link: "/jobs" },
-    { name: "For Employers", link: "/employers" },
+    { name: "For Employers", link: "/for-employers" },
     { name: "Pricing", link: "/pricing" },
     { name: "Blog", link: "/blog" },
   ];
