@@ -61,7 +61,13 @@ export function Testimonials() {
             <OrbitingIcons
               centerIcon={
                 <div className="p-4 overflow-hidden z-20 flex items-center justify-center rounded-[15px] border-[1.5px] border-[#F3F3F3] bg-gradient-to-br from-[#FBFBFB] via-[#FBFBFB] to-[#E8E8E8] shadow-[0px_123px_35px_0px_rgba(0,0,0,0.00),_0px_79px_32px_0px_rgba(0,0,0,0.01),_0px_44px_27px_0px_rgba(0,0,0,0.05),_0px_20px_20px_0px_rgba(0,0,0,0.09),_0px_5px_11px_0px_rgba(0,0,0,0.10)]">
-                  <LightningIcon className="w-12 h-12" />
+                  <Image
+                    src="/logo-icon.png"
+                    alt="LynxHire"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
               }
               orbits={[
@@ -94,109 +100,6 @@ export function Testimonials() {
   );
 }
 
-const LightningIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      className={cn("w-6 h-6 text-[#FF6B2B]", className)}
-      viewBox="0 0 49 67"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_di_966_1395)">
-        <motion.path
-          d="M37.6792 21.5018H29.1957C28.5839 21.5018 28.1155 20.9573 28.2069 20.3523L29.8985 9.16102C29.954 8.79514 29.9365 8.4203 29.8473 8.06263C29.758 7.70496 29.5991 7.37304 29.3817 7.08999C29.1643 6.80694 28.8935 6.57957 28.5883 6.42371C28.283 6.26785 27.9507 6.18724 27.6143 6.1875H15.6911C15.1436 6.18768 14.6139 6.4019 14.1961 6.7921C13.7783 7.18231 13.4995 7.72322 13.4092 8.31874L9.55125 33.8425C9.49578 34.2082 9.51322 34.5828 9.60233 34.9403C9.69145 35.2978 9.85012 35.6296 10.0673 35.9126C10.2845 36.1956 10.5549 36.423 10.8599 36.5791C11.1649 36.7351 11.497 36.816 11.8331 36.8161H20.0903C20.6426 36.8161 21.0903 37.2638 21.0903 37.8161V53.534C21.0903 54.5549 22.4401 54.9196 22.9542 54.0376L39.6278 25.435C39.8528 25.0493 39.9794 24.6038 39.9942 24.1455C40.0091 23.6871 39.9117 23.2328 39.7123 22.8303C39.5129 22.4278 39.2189 22.092 38.8611 21.8583C38.5033 21.6245 38.095 21.5013 37.6792 21.5018Z"
-          fill="#D4611E"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
-        <motion.path
-          d="M37.6792 21.5018H29.1957C28.5839 21.5018 28.1155 20.9573 28.2069 20.3523L29.8985 9.16102C29.954 8.79514 29.9365 8.4203 29.8473 8.06263C29.758 7.70496 29.5991 7.37304 29.3817 7.08999C29.1643 6.80694 28.8935 6.57957 28.5883 6.42371C28.283 6.26785 27.9507 6.18724 27.6143 6.1875H15.6911C15.1436 6.18768 14.6139 6.4019 14.1961 6.7921C13.7783 7.18231 13.4995 7.72322 13.4092 8.31874L9.55125 33.8425C9.49578 34.2082 9.51322 34.5828 9.60233 34.9403C9.69145 35.2978 9.85012 35.6296 10.0673 35.9126C10.2845 36.1956 10.5549 36.423 10.8599 36.5791C11.1649 36.7351 11.497 36.816 11.8331 36.8161H20.0903C20.6426 36.8161 21.0903 37.2638 21.0903 37.8161V53.534C21.0903 54.5549 22.4401 54.9196 22.9542 54.0376L39.6278 25.435C39.8528 25.0493 39.9794 24.6038 39.9942 24.1455C40.0091 23.6871 39.9117 23.2328 39.7123 22.8303C39.5129 22.4278 39.2189 22.092 38.8611 21.8583C38.5033 21.6245 38.095 21.5013 37.6792 21.5018Z"
-          fill="url(#paint0_linear_966_1395)"
-          fillOpacity="0.7"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_di_966_1395"
-          x="0.519531"
-          y="0.1875"
-          width="48.4766"
-          height="66.3482"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="3" />
-          <feGaussianBlur stdDeviation="4.5" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_966_1395"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_966_1395"
-            result="shape"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset />
-          <feGaussianBlur stdDeviation="1.24444" />
-          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="shape"
-            result="effect2_innerShadow_966_1395"
-          />
-        </filter>
-        <linearGradient
-          id="paint0_linear_966_1395"
-          x1="18.227"
-          y1="2.45231"
-          x2="56.1912"
-          y2="37.6499"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#FFE0CF" />
-          <stop offset="1" stopColor="#F68340" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-};
-
 const OrbitingIcons = ({
   centerIcon,
   orbits,
@@ -211,18 +114,15 @@ const OrbitingIcons = ({
   }>;
   className?: string;
 }) => {
-  // Precalculate all orbit data
   const orbitData = React.useMemo(() => {
     return orbits.map((orbit, orbitIndex) => {
       const radius = orbit.radius || 100 + orbitIndex * 80;
       const speed = orbit.speed || 1;
       const iconCount = orbit.icons.length;
 
-      // Calculate angles for each icon with even distribution
       const angleStep = 360 / iconCount;
       const angles = Array.from({ length: iconCount }, (_, i) => angleStep * i);
 
-      // Precalculate positions and animations for each icon
       const iconData = angles.map((angle) => {
         const rotationAngle =
           orbit.rotationDirection === "clockwise"

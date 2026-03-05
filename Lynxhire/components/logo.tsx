@@ -10,7 +10,7 @@ interface LynxHireLogoProps {
 
 export function LynxHireLogo({
   variant = "light",
-  height = 36,
+  height = 42,
 }: LynxHireLogoProps) {
   const src = variant === "dark" ? "/logo-dark.png" : "/logo-light.png";
   return (
