@@ -75,14 +75,15 @@ export function Testimonials() {
                   icons: testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="w-[120px] h-[120px] overflow-hidden rounded-[133px] bg-gray-400 bg-cover bg-center bg-no-repeat shadow-[0px_44px_12px_0px_rgba(0,0,0,0.00),_0px_28px_11px_0px_rgba(0,0,0,0.03),_0px_16px_10px_0px_rgba(0,0,0,0.11),_0px_7px_7px_0px_rgba(0,0,0,0.19),_0px_2px_4px_0px_rgba(0,0,0,0.22)]"
+                      className="relative w-[120px] h-[120px] overflow-hidden rounded-full shadow-[0px_44px_12px_0px_rgba(0,0,0,0.00),_0px_28px_11px_0px_rgba(0,0,0,0.03),_0px_16px_10px_0px_rgba(0,0,0,0.11),_0px_7px_7px_0px_rgba(0,0,0,0.19),_0px_2px_4px_0px_rgba(0,0,0,0.22)]"
                     >
                       <Image
                         src={testimonial.image}
                         alt={`Testimonial ${index + 1}`}
-                        width={220}
-                        height={220}
+                        width={120}
+                        height={120}
                         className="w-full h-full object-cover"
+                        unoptimized
                       />
                     </div>
                   )),

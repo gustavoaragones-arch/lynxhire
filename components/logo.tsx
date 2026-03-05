@@ -18,9 +18,9 @@ export function LynxHireLogo({
       src={src}
       alt="LynxHire — AI-powered recruitment Canada, PIPEDA compliant job board"
       height={height}
-      width={0}
+      width={200}
       sizes="200px"
-      style={{ width: "auto", height: `${height}px` }}
+      style={{ width: "auto", height: `${height}px`, maxWidth: "100%" }}
       priority
     />
   );
