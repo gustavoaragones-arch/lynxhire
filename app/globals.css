@@ -6,7 +6,7 @@
   --card: #ffffff;
   --card-foreground: #171717;
   --border: #e5e5e5;
-  --primary: #ff9f1c;
+  --primary: #f17e60;
   --primary-foreground: #0b0c0e;
   --muted-foreground: #737373;
   --destructive: #ef4444;
@@ -59,4 +59,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Sign Up: force gray-to-black gradient (overrides theme) */
+.nav-signup-btn {
+  background: linear-gradient(to bottom, #737373, #171717) !important;
+  color: white !important;
+}
+.nav-signup-btn:hover {
+  background: linear-gradient(to bottom, #525252, #000000) !important;
 }

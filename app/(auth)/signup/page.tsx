@@ -163,7 +163,8 @@ export default function SignupPage() {
               <Button
                 type="submit"
                 as="button"
-                className="w-full bg-[linear-gradient(195deg,_#FFA756_17.78%,_#EE602C_75.71%)] hover:opacity-90 transition-opacity"
+                variant="primary"
+                className="w-full bg-gradient-to-b from-neutral-700 to-neutral-900 text-white shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200 disabled:opacity-60"
                 disabled={form.formState.isSubmitting}
               >
                 {form.formState.isSubmitting ? "Creating Account..." : "Create Account"}

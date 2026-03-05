@@ -159,14 +159,12 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
               <Button as={Link} href="/auth/login" variant="secondary">
                 Log In
               </Button>
-              <Button
-                as={Link}
+              <Link
                 href="/auth/signup"
-                className="bg-[#FF9F1C] hover:opacity-90 text-white border-0"
-                variant="primary"
+                className="nav-signup-btn inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-bold shadow-sm transition-all duration-200 border-0"
               >
                 Sign Up
-              </Button>
+              </Link>
             </div>
           </motion.div>
         )}
