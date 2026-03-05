@@ -18,51 +18,64 @@ const features = [
 
 export default function ForEmployersPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white">
+
       {/* Hero */}
-      <section className="py-20 px-4 text-center border-b border-border">
+      <section className="pt-36 pb-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="inline-block text-xs font-semibold px-3 py-1 rounded-full border border-border text-muted-foreground mb-6">
+          <div className="inline-flex items-center gap-2 border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5 mb-8">
             For Canadian Employers
           </div>
-          <h1 className="font-heading font-bold text-foreground text-5xl mb-5 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6 leading-tight tracking-tight">
             Hire faster with<br />
-            <span style={{ color: 'var(--primary)' }}>AI-powered matching</span>
+            <span className="text-[#FF6B2B]">AI-powered matching</span>
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
+          <p className="text-neutral-500 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             Stop sifting through hundreds of unqualified resumes.
             LynxHire surfaces the candidates who actually fit — ranked by AI match score.
           </p>
-          <div className="flex gap-3 justify-center">
+          <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/auth/signup"
-              className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 transition-all">
+              className="bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
               Post Your First Job Free
             </Link>
             <Link href="/pricing"
-              className="px-6 py-3 border border-border text-foreground font-medium rounded-xl text-sm hover:bg-muted transition-all">
+              className="border border-neutral-200 text-neutral-700 px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-50 transition-all duration-200">
               View Pricing
             </Link>
           </div>
         </div>
       </section>
 
+      {/* Trusted by */}
+      <div className="text-center pb-6">
+        <p className="text-sm font-semibold text-neutral-400 tracking-wide uppercase">
+          Trusted by Industry Leaders
+        </p>
+      </div>
+
       {/* Features */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 border-t border-neutral-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading font-bold text-foreground text-2xl text-center mb-12">
-            Everything you need to hire in Canada
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Features so good you&apos;ll{' '}
+              <span className="text-[#FF6B2B]">Love us</span>
+            </h2>
+            <p className="text-neutral-500 max-w-xl mx-auto">
+              Built for Canadian employers and job seekers, we&apos;re showing you the top features that make hiring and job searching actually work.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
             {features.map(f => (
-              <div key={f.title} className="bg-card border border-border rounded-2xl p-6">
+              <div key={f.title} className="bg-white border border-neutral-100 rounded-2xl p-6 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                    style={{ backgroundColor: 'var(--primary)' }}>
-                    <Check size={11} className="text-white" />
+                  <div className="w-5 h-5 rounded-full bg-[#FF6B2B]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check size={11} className="text-[#FF6B2B]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground text-sm mb-1">{f.title}</p>
-                    <p className="text-muted-foreground text-sm">{f.desc}</p>
+                    <p className="font-semibold text-neutral-900 text-sm mb-1">{f.title}</p>
+                    <p className="text-neutral-500 text-sm leading-relaxed">{f.desc}</p>
                   </div>
                 </div>
               </div>
@@ -71,27 +84,61 @@ export default function ForEmployersPage() {
         </div>
       </section>
 
+      {/* In-built AI Integration section */}
+      <section className="py-20 px-4 border-t border-neutral-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+            In built{' '}
+            <span className="text-[#FF6B2B]">AI Integration</span>
+          </h2>
+          <p className="text-neutral-500 max-w-2xl mx-auto mb-14">
+            With AI transforming recruitment, we&apos;ve integrated it where it matters most: intelligent matching, smart job descriptions, and automated candidate ranking that actually works.
+          </p>
+          <div className="grid md:grid-cols-3 gap-5 text-left">
+            {[
+              {
+                title: 'AI Job Description Builder',
+                desc: 'Generate professional, inclusive job postings in seconds. Just input the role and requirements, then edit and publish.',
+              },
+              {
+                title: 'Transparent Pricing',
+                desc: 'We offer straightforward pricing built for Canadian SMEs. No hidden fees, no pay-per-click traps, just affordable access to quality candidates.',
+              },
+              {
+                title: 'Collaborative Hiring',
+                desc: 'With built-in team features, invite hiring managers, share candidate notes, use scorecards, and make better hiring decisions together.',
+              },
+            ].map(card => (
+              <div key={card.title} className="bg-white border border-neutral-100 rounded-2xl p-6 shadow-sm">
+                <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* vs competitors */}
-      <section className="py-12 px-4 border-t border-border">
+      <section className="py-20 px-4 border-t border-neutral-100">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading font-bold text-foreground text-2xl mb-4">
+          <h2 className="text-4xl font-bold text-neutral-900 mb-4">
             Why not Indeed or LinkedIn?
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-neutral-500 mb-12 max-w-xl mx-auto">
             Indeed charges per click with no quality guarantee. LinkedIn is expensive and built for networking, not hiring.
-            LynxHire is a flat subscription built specifically for Canadian SMBs who need to hire without burning budget.
+            LynxHire is a flat subscription built specifically for Canadian SMBs.
           </p>
           <div className="grid grid-cols-3 gap-4 text-sm">
             {[
-              { label: 'LynxHire', items: ['Flat monthly fee', 'AI match scoring', 'Canadian-first filters', 'Built-in ATS included'] },
-              { label: 'Indeed', items: ['Pay per click', 'No match scoring', 'Generic filters', 'ATS costs extra'] },
-              { label: 'LinkedIn', items: ['Premium pricing', 'Networking focus', 'US-centric', 'Job slots limited'] },
-            ].map((col, i) => (
+              { label: 'LynxHire', highlight: true, items: ['Flat monthly fee', 'AI match scoring', 'Canadian-first filters', 'Built-in ATS included'] },
+              { label: 'Indeed', highlight: false, items: ['Pay per click', 'No match scoring', 'Generic filters', 'ATS costs extra'] },
+              { label: 'LinkedIn', highlight: false, items: ['Premium pricing', 'Networking focus', 'US-centric', 'Job slots limited'] },
+            ].map(col => (
               <div key={col.label}
-                className={`rounded-2xl p-5 border ${i === 0 ? 'border-primary bg-primary/5' : 'border-border bg-card'}`}>
-                <p className={`font-semibold mb-3 ${i === 0 ? 'text-primary' : 'text-foreground'}`}>{col.label}</p>
+                className={`rounded-2xl p-5 border text-left ${col.highlight ? 'border-[#FF6B2B]/30 bg-[#FF6B2B]/5' : 'border-neutral-100 bg-white'}`}>
+                <p className={`font-bold mb-3 ${col.highlight ? 'text-[#FF6B2B]' : 'text-neutral-900'}`}>{col.label}</p>
                 {col.items.map(item => (
-                  <p key={item} className="text-muted-foreground text-xs mb-1.5">{item}</p>
+                  <p key={item} className="text-neutral-500 text-xs mb-1.5">{item}</p>
                 ))}
               </div>
             ))}
@@ -100,20 +147,21 @@ export default function ForEmployersPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 border-t border-border text-center">
+      <section className="py-20 px-4 border-t border-neutral-100 text-center">
         <div className="max-w-xl mx-auto">
-          <h2 className="font-heading font-bold text-foreground text-2xl mb-3">
+          <h2 className="text-4xl font-bold text-neutral-900 mb-3">
             Ready to hire smarter?
           </h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-neutral-500 mb-8">
             Start free with 1 job posting. No credit card required.
           </p>
           <Link href="/auth/signup"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 transition-all">
+            className="inline-block bg-neutral-900 text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
             Get Started Free
           </Link>
         </div>
       </section>
+
     </main>
   )
 }

@@ -7,23 +7,25 @@ export const metadata: Metadata = {
 
 export default function PressPage() {
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center px-4">
-      <div className="max-w-md text-center">
+    <main className="min-h-screen bg-white flex items-center justify-center px-4">
+      <section className="pt-36 pb-20 max-w-md text-center">
         <p className="text-5xl mb-6">📰</p>
-        <h1 className="font-heading font-bold text-foreground text-3xl mb-3">
+        <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-3">
           Press & Media
         </h1>
-        <p className="text-muted-foreground mb-2">
+        <p className="text-neutral-500 mb-2 leading-relaxed">
           For press inquiries, interview requests, or media assets, contact us directly.
         </p>
-        <p className="text-muted-foreground mb-8">
+        <p className="text-neutral-500 mb-8 leading-relaxed">
           We respond to media requests within 24 hours.
         </p>
-        <a href="mailto:press@lynxhire.ca"
-          className="px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 transition-all">
+        <a
+          href="mailto:press@lynxhire.ca"
+          className="inline-block bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
+        >
           press@lynxhire.ca
         </a>
-      </div>
+      </section>
     </main>
   )
 }
