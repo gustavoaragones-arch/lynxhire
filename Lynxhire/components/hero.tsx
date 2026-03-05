@@ -55,8 +55,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-2xl px-4 text-center text-base/6 text-gray-600  sm:text-base"
       >
-        Find verified talent with a single search. Go from hundreds of spam
-        resumes to a shortlist of qualified candidates using LynxHire, Canada's AI-powered job platform.
+        Reduce resume spam and get a shortlist of qualified candidates. LynxHire is Canada&apos;s PIPEDA compliant job board with skills-based matching and AI-powered recruitment for Canadian workforce optimization.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 10 }}

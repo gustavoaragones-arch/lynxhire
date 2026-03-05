@@ -4,11 +4,13 @@ import { Button } from "./button";
 const PricingCard = ({
   tier,
   price,
+  period = "/month",
   isHighlighted = false,
   features,
 }: {
   tier: string;
   price: number;
+  period?: string;
   isHighlighted?: boolean;
   features: string[];
 }) => {
@@ -28,7 +30,7 @@ const PricingCard = ({
           <div className="mt-2 flex items-baseline">
             <span className="text-[40px] font-bold">$</span>
             <span className="text-[40px] font-bold">{price}</span>
-            <span className="ml-1 text-gray-500">/month</span>
+            <span className="ml-1 text-gray-500">{period}</span>
           </div>
         </div>
 
@@ -59,33 +61,30 @@ const PricingCard = ({
 };
 
 export default function Pricing() {
-  const hobbyFeatures = [
-    "Access to basic analytics reports",
-    "Up to 10,000 data points per month",
-    "Email support",
-    "Community forum access",
-    "Cancel anytime",
+  const freeFeatures = [
+    "1 active job posting",
+    "Basic AI matching",
+    "Unlimited candidate browsing",
+    "In-platform messaging",
+    "Standard support",
   ];
 
-  const promiseFeatures = [
-    "Access to basic analytics reports",
-    "Up to 10,000 data points per month",
-    "Email support",
-    "Community forum access",
-    "Cancel anytime",
-    "Access to basic analytics reports",
-    "Up to 10,000 data points per month",
-    "Email support",
-    "Community forum access",
-    "Cancel anytime",
+  const starterFeatures = [
+    "10 active job postings",
+    "Advanced AI matching & scoring",
+    "Full ATS pipeline",
+    "25 resume downloads/month",
+    "Priority support",
+    "Company profile badge",
   ];
 
-  const proFeatures = [
-    "Access to basic analytics reports",
-    "Up to 10,000 data points per month",
-    "Email support",
-    "Community forum access",
-    "Cancel anytime",
+  const growthFeatures = [
+    "Unlimited job postings",
+    "Full AI suite + bulk scoring",
+    "Full ATS + hiring analytics",
+    "Unlimited resume access",
+    "Dedicated account support",
+    "Custom company profile",
   ];
 
   return (
@@ -100,14 +99,15 @@ export default function Pricing() {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-4 items-center">
-        <PricingCard tier="Hobby" price={99} features={hobbyFeatures} />
+        <PricingCard tier="Free" price={0} period="forever" features={freeFeatures} />
         <PricingCard
-          tier="Promise"
-          price={299}
-          features={promiseFeatures}
+          tier="Starter"
+          price={149}
+          period="/month CAD"
+          features={starterFeatures}
           isHighlighted
         />
-        <PricingCard tier="Pro" price={199} features={proFeatures} />
+        <PricingCard tier="Growth" price={299} period="/month CAD" features={growthFeatures} />
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ export async function generateMetadata({
 
   return {
     title: `${job.title} at ${company?.name ?? "Company"}`,
-    description: `${job.title} position${location ? ` in ${location}` : ""} at ${company?.name ?? "a Canadian company"}. Apply now on LynxHire.`,
+    description: `${job.title} position${location ? ` in ${location}` : ""} at ${company?.name ?? "a Canadian company"}. Skills-based matching and qualified talent acquisition Canada. Apply now on LynxHire.`,
     openGraph: {
       title: `${job.title} — ${company?.name ?? "LynxHire"}`,
       description: job.description?.slice(0, 160) ?? "",

@@ -12,18 +12,30 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_APP_URL ?? "https://www.lynxhire.ca"
   ),
   title: {
-    default: "LynxHire — Canadian Job Platform Powered by AI",
+    default: "LynxHire — AI-Powered Recruitment Canada | PIPEDA Compliant Job Board",
     template: "%s — LynxHire",
   },
   description:
-    "Find your next job or hire top Canadian talent with AI-powered matching. LynxHire connects employers and candidates across Canada.",
+    "AI-powered recruitment Canada: skilled trades hiring platform and PIPEDA compliant job board. Canadian workforce optimization with skills-based matching software. Reduce resume spam for employers—ethical AI hiring tools for Canadian SMEs.",
   keywords: [
+    "AI-powered recruitment Canada",
+    "skilled trades hiring platform",
+    "PIPEDA compliant job board",
+    "Canadian workforce optimization",
+    "skills-based matching software",
+    "reduce resume spam for Canadian employers",
+    "ethical AI hiring tools Canada",
+    "precision recruitment for Canadian SMEs",
+    "verified candidate matching Alberta",
+    "high-skill immigrant recruitment tools",
+    "internal trade labor matching",
+    "Canadian industrial recruitment technology",
+    "qualified talent acquisition Canada",
+    "automated candidate screening for Canadian businesses",
     "Canadian jobs",
     "job board Canada",
     "AI hiring",
-    "job search Canada",
     "hire in Canada",
-    "Canadian recruitment",
   ],
   authors: [{ name: "LynxHire", url: "https://www.lynxhire.ca" }],
   creator: "Albor Digital LLC",
@@ -38,23 +50,23 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://www.lynxhire.ca",
     siteName: "LynxHire",
-    title: "LynxHire — Canadian Job Platform Powered by AI",
+    title: "LynxHire — AI-Powered Recruitment Canada | PIPEDA Compliant Job Board",
     description:
-      "Find your next job or hire top Canadian talent with AI-powered matching.",
+      "Canadian workforce optimization with skills-based matching. PIPEDA compliant job board and ethical AI hiring tools for Canadian SMEs. Reduce resume spam, find qualified talent.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LynxHire — Canadian Job Platform",
+        alt: "LynxHire — AI-powered recruitment Canada, PIPEDA compliant job board and skilled trades hiring platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LynxHire — Canadian Job Platform Powered by AI",
+    title: "LynxHire — AI-Powered Recruitment Canada | PIPEDA Compliant Job Board",
     description:
-      "Find your next job or hire top Canadian talent with AI-powered matching.",
+      "Canadian workforce optimization with skills-based matching. PIPEDA compliant job board and ethical AI hiring tools for Canadian SMEs.",
     images: ["/og-image.png"],
   },
   icons: {

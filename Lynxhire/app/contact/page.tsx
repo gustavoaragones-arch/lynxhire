@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact LynxHire',
-  description: 'Get in touch with the LynxHire team. We respond within 1 business day.',
+  description: 'Contact the LynxHire team—AI-powered recruitment Canada and PIPEDA compliant job board. Questions on qualified talent acquisition, skilled trades hiring, or ethical AI hiring tools. We respond within 1 business day.',
+  keywords: ['contact LynxHire', 'AI-powered recruitment Canada', 'PIPEDA compliant job board', 'Canadian workforce optimization'],
 }
 
 export default function ContactPage() {

@@ -16,7 +16,7 @@ export function LynxHireLogo({
   return (
     <Image
       src={src}
-      alt="LynxHire"
+      alt="LynxHire — AI-powered recruitment Canada, PIPEDA compliant job board"
       height={height}
       width={0}
       sizes="200px"

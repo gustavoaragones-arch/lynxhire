@@ -42,8 +42,8 @@ export function Features2() {
           <CardContent className="absolute z-10 bottom-0">
             <CardTitle>AI-Powered Candidate Matching</CardTitle>
             <CardDescription>
-            Our intelligent system analyzes skills, experience, and job requirements to surface
-            only candidates with 60%+ match scores, eliminating resume spam.
+            Skills-based matching software: our system analyzes skills, experience, and job requirements to surface
+            only candidates with 60%+ match scores, reducing resume spam for Canadian employers.
             </CardDescription>
           </CardContent>
         </Card>

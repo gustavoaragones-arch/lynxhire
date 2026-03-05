@@ -3,8 +3,9 @@ import Link from 'next/link'
 import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Hire in Canada with AI — LynxHire for Employers',
-  description: 'Post jobs, get AI-matched candidates, and hire faster. LynxHire helps Canadian employers find verified talent without the noise.',
+  title: 'Precision Recruitment for Canadian SMEs — LynxHire for Employers',
+  description: 'Reduce resume spam for Canadian employers with AI-powered recruitment Canada. Skilled trades hiring platform and skills-based matching software. Automated candidate screening and verified candidate matching for qualified talent acquisition.',
+  keywords: ['precision recruitment for Canadian SMEs', 'reduce resume spam for Canadian employers', 'AI-powered recruitment Canada', 'skilled trades hiring platform', 'skills-based matching software', 'automated candidate screening for Canadian businesses', 'verified candidate matching Alberta', 'ethical AI hiring tools Canada'],
 }
 
 const features = [
@@ -23,24 +24,23 @@ export default function ForEmployersPage() {
       {/* Hero */}
       <section className="pt-36 pb-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5 mb-8">
+          <p className="text-center text-[#3D3D3D] text-[22px] font-semibold mb-8">
             For Canadian Employers
-          </div>
+          </p>
           <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6 leading-tight tracking-tight">
             Hire faster with<br />
             <span className="text-[#FF6B2B]">AI-powered matching</span>
           </h1>
           <p className="text-neutral-500 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-            Stop sifting through hundreds of unqualified resumes.
-            LynxHire surfaces the candidates who actually fit — ranked by AI match score.
+            Reduce resume spam for Canadian employers. LynxHire surfaces qualified talent with skills-based matching — ranked by AI match score.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/auth/signup"
-              className="bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+              className="bg-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
               Post Your First Job Free
             </Link>
             <Link href="/pricing"
-              className="border border-neutral-200 text-neutral-700 px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-50 transition-all duration-200">
+              className="border border-neutral-200 text-neutral-700 px-7 py-3 rounded-xl text-sm font-medium hover:bg-neutral-50 transition-all duration-200">
               View Pricing
             </Link>
           </div>
@@ -68,7 +68,7 @@ export default function ForEmployersPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {features.map(f => (
-              <div key={f.title} className="bg-white border border-neutral-100 rounded-2xl p-6 shadow-sm">
+              <div key={f.title} className="bg-[#F9FAFB] rounded-2xl p-6 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]">
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#FF6B2B]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check size={11} className="text-[#FF6B2B]" />
@@ -109,7 +109,7 @@ export default function ForEmployersPage() {
                 desc: 'With built-in team features, invite hiring managers, share candidate notes, use scorecards, and make better hiring decisions together.',
               },
             ].map(card => (
-              <div key={card.title} className="bg-white border border-neutral-100 rounded-2xl p-6 shadow-sm">
+              <div key={card.title} className="bg-[#F9FAFB] rounded-2xl p-6 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]">
                 <h3 className="font-bold text-neutral-900 mb-2">{card.title}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">{card.desc}</p>
               </div>
@@ -122,11 +122,11 @@ export default function ForEmployersPage() {
       <section className="py-20 px-4 border-t border-neutral-100">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-neutral-900 mb-4">
-            Why not Indeed or LinkedIn?
+            Precision recruitment for Canadian SMEs
           </h2>
           <p className="text-neutral-500 mb-12 max-w-xl mx-auto">
             Indeed charges per click with no quality guarantee. LinkedIn is expensive and built for networking, not hiring.
-            LynxHire is a flat subscription built specifically for Canadian SMBs.
+            LynxHire is a flat subscription for qualified talent acquisition Canada—automated candidate screening without the spam.
           </p>
           <div className="grid grid-cols-3 gap-4 text-sm">
             {[
@@ -135,7 +135,7 @@ export default function ForEmployersPage() {
               { label: 'LinkedIn', highlight: false, items: ['Premium pricing', 'Networking focus', 'US-centric', 'Job slots limited'] },
             ].map(col => (
               <div key={col.label}
-                className={`rounded-2xl p-5 border text-left ${col.highlight ? 'border-[#FF6B2B]/30 bg-[#FF6B2B]/5' : 'border-neutral-100 bg-white'}`}>
+                className={`rounded-2xl p-5 text-left ${col.highlight ? 'border border-[#FF6B2B]/30 bg-[#FF6B2B]/5' : 'bg-[#F9FAFB] shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]'}`}>
                 <p className={`font-bold mb-3 ${col.highlight ? 'text-[#FF6B2B]' : 'text-neutral-900'}`}>{col.label}</p>
                 {col.items.map(item => (
                   <p key={item} className="text-neutral-500 text-xs mb-1.5">{item}</p>
@@ -156,7 +156,7 @@ export default function ForEmployersPage() {
             Start free with 1 job posting. No credit card required.
           </p>
           <Link href="/auth/signup"
-            className="inline-block bg-neutral-900 text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+            className="inline-block bg-neutral-900 text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
             Get Started Free
           </Link>
         </div>
