@@ -19,17 +19,17 @@ export function LegalPage({
   sections,
 }: LegalPageProps) {
   return (
-    <article className="prose-legal">
-      <div className="mb-8 border-b border-border pb-6">
-        <h1 className="font-heading text-3xl font-bold text-foreground mb-3">
+    <article className="prose-legal pt-28">
+      <div className="mb-8 border-b border-neutral-100 pb-6">
+        <h1 className="font-heading text-3xl font-bold text-neutral-900 mb-3">
           {title}
         </h1>
-        <div className="flex gap-4 text-xs text-muted-foreground">
+        <div className="flex gap-4 text-xs text-neutral-500">
           <span>Effective: {effectiveDate}</span>
           <span>Last updated: {lastUpdated}</span>
         </div>
         {intro && (
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-4 text-sm leading-relaxed text-neutral-500">
             {intro}
           </p>
         )}
@@ -38,7 +38,7 @@ export function LegalPage({
       <div className="space-y-8">
         {sections.map((section, i) => (
           <section key={i}>
-            <h2 className="font-heading text-lg font-semibold text-foreground mb-3">
+            <h2 className="font-heading text-lg font-semibold text-neutral-900 mb-3">
               {section.heading}
             </h2>
             {Array.isArray(section.content) ? (
@@ -46,15 +46,15 @@ export function LegalPage({
                 {section.content.map((item, j) => (
                   <li
                     key={j}
-                    className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
+                    className="flex gap-2 text-sm leading-relaxed text-neutral-500"
                   >
-                    <span className="mt-1 flex-shrink-0 text-primary">—</span>
+                    <span className="mt-1 flex-shrink-0 text-[#FF6B2B]">—</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+              <p className="whitespace-pre-line text-sm leading-relaxed text-neutral-500">
                 {section.content}
               </p>
             )}
@@ -62,13 +62,13 @@ export function LegalPage({
         ))}
       </div>
 
-      <div className="mt-12 border-t border-border pt-6">
-        <p className="text-xs text-muted-foreground">
+      <div className="mt-12 border-t border-neutral-100 pt-6">
+        <p className="text-xs text-neutral-500">
           LynxHire is operated by Albor Digital LLC. Governing law: Alberta,
           Canada. Questions? Contact{" "}
           <a
             href="mailto:legal@lynxhire.ca"
-            className="text-primary hover:underline"
+            className="text-[#FF6B2B] hover:underline"
           >
             legal@lynxhire.ca
           </a>
