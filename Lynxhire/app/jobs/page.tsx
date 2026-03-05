@@ -1,5 +1,5 @@
 // STYLE RULE: Never invent new styles. Always copy from existing template components.
-// Buttons: bg-neutral-900 text-white rounded-full (primary) | border border-neutral-200 rounded-full (secondary)
+// Buttons: gray-to-black gradient rounded-xl (primary) | border border-neutral-200 rounded-xl (secondary)
 // Orange: #FF6B2B only
 // Badge/pill: border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5
 // Cards: bg-white border border-neutral-100 rounded-2xl shadow-sm
@@ -51,7 +51,7 @@ export default async function PublicJobsPage() {
             <h3 className="text-lg font-semibold text-neutral-900 mb-2">No jobs posted yet</h3>
             <p className="text-neutral-500 text-sm mb-6">Be the first employer to post on LynxHire.</p>
             <Link href="/auth/signup"
-              className="bg-neutral-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+              className="bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-6 py-2.5 rounded-xl text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200">
               Post a Job
             </Link>
           </div>

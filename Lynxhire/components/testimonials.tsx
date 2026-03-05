@@ -51,7 +51,7 @@ export function Testimonials() {
               ))}
             </div>
 
-            <Button className="bg-neutral-900 text-white px-6 py-2.5 rounded-full hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+            <Button variant="primary" className="px-6 py-2.5">
               Get Started
             </Button>
           </div>

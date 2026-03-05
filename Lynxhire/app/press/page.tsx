@@ -21,7 +21,7 @@ export default function PressPage() {
         </p>
         <a
           href="mailto:press@lynxhire.ca"
-          className="inline-block bg-neutral-900 text-white px-7 py-3 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
+          className="inline-block bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
         >
           press@lynxhire.ca
         </a>

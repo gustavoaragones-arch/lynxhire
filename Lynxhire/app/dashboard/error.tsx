@@ -26,13 +26,13 @@ export default function DashboardError({
       <div className="flex gap-3">
         <button
           onClick={reset}
-          className="px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 transition-all"
+          className="px-5 py-2.5 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white font-medium rounded-xl text-sm shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
         >
           Try Again
         </button>
         <Link
           href="/dashboard/candidate"
-          className="px-5 py-2.5 border border-border text-foreground font-medium rounded-xl text-sm hover:bg-card transition-all"
+          className="px-5 py-2.5 border border-neutral-200 text-neutral-700 font-medium rounded-xl text-sm hover:bg-neutral-50 transition-all duration-200"
         >
           Go to Dashboard
         </Link>

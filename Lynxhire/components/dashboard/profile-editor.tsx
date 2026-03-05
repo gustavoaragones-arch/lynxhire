@@ -369,7 +369,7 @@ export function ProfileEditor({
         <button
           type="submit"
           disabled={saving}
-          className="rounded-xl bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-60"
+          className="rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-6 py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
         >
           {saving ? "Saving..." : "Save Profile"}
         </button>

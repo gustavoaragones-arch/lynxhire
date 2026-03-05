@@ -19,7 +19,7 @@ export const Button = <T extends React.ElementType = "a">({
   const Tag = as || "a" as React.ElementType as T;
 
   const baseStyles = cn(
-    "px-4 py-2 flex rounded-[6px] text-sm font-bold relative",
+    "px-4 py-2 flex rounded-xl text-sm font-bold relative",
     "cursor-pointer hover:-translate-y-0.5 transition duration-200",
     "inline-flex items-center justify-center",
     "text-black"
@@ -27,15 +27,14 @@ export const Button = <T extends React.ElementType = "a">({
 
   const variantStyles = {
     primary: cn(
-      "rounded-[6px]",
-      "bg-[linear-gradient(181deg,_#5E5E5E_18.12%,_#000_99.57%)]",
-      "shadow-[0px_4px_8px_0px_rgba(3,_7,_18,_0.06),_0px_2px_4px_0px_rgba(3,_7,_18,_0.06),",
-      "0px_0px_0px_1px_rgba(3,_7,_18,_0.08),_0px_1px_1px_2px_rgba(255,_255,_255,_0.40)_inset,",
-      "0px_-1px_5px_2px_rgba(255,_255,_255,_0.40)_inset]",
+      "rounded-xl",
+      "bg-gradient-to-b from-neutral-700 to-neutral-900",
+      "hover:from-neutral-800 hover:to-black",
+      "shadow-sm",
       "text-white"
     ),
-    secondary: cn("bg-white rounded-[6px] border border-[#E5E5E5]"),
-    dark: cn("bg-gray-800 text-white rounded-[6px]"),
+    secondary: cn("bg-white rounded-xl border border-neutral-200 hover:bg-neutral-50"),
+    dark: cn("bg-gradient-to-b from-neutral-700 to-neutral-900 text-white rounded-xl"),
     gradient: cn(
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white",
       "shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"

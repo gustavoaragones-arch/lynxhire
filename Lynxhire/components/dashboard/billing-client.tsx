@@ -196,7 +196,7 @@ export function BillingClient({
                   <button
                     onClick={() => handleUpgrade(plan.id)}
                     disabled={!!loading}
-                    className="px-4 py-2 bg-primary text-primary-foreground text-xs font-medium rounded-xl hover:bg-primary/90 disabled:opacity-60 transition-all"
+                    className="px-4 py-2 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white text-xs font-medium rounded-xl shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
                   >
                     {loading === plan.id ? "Redirecting..." : plan.cta}
                   </button>

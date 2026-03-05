@@ -22,12 +22,12 @@ export default function LegalLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="min-h-screen bg-white">
+      <div className="mx-auto max-w-6xl px-4 pt-28 pb-12">
         <div className="grid gap-10 lg:grid-cols-4">
           <aside className="lg:col-span-1">
             <div className="sticky top-8">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-neutral-500">
                 Legal & Trust
               </p>
               <nav className="space-y-1">
@@ -35,19 +35,19 @@ export default function LegalLayout({
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="block py-1.5 text-sm text-neutral-500 transition-colors hover:text-neutral-900"
                   >
                     {link.label}
                   </Link>
                 ))}
               </nav>
-              <div className="mt-8 rounded-xl border border-border bg-card p-4">
-                <p className="mb-1 text-xs font-medium text-foreground">
+              <div className="mt-8 bg-white border border-neutral-100 rounded-2xl p-4 shadow-sm">
+                <p className="mb-1 text-xs font-medium text-neutral-900">
                   Legal questions?
                 </p>
                 <a
                   href="mailto:legal@lynxhire.ca"
-                  className="text-xs text-primary hover:underline"
+                  className="text-xs text-[#FF6B2B] hover:underline"
                 >
                   legal@lynxhire.ca
                 </a>

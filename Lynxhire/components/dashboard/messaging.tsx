@@ -218,7 +218,7 @@ export function Messaging({
           <button
             type="submit"
             disabled={sending || !newMessage.trim()}
-            className="px-4 py-2.5 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 disabled:opacity-60 transition-all"
+            className="px-4 py-2.5 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white rounded-xl shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
           >
             <Send size={16} />
           </button>

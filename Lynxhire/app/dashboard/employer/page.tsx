@@ -101,7 +101,7 @@ export default async function EmployerDashboard() {
             </div>
             <Link
               href="/dashboard/employer/post-job"
-              className="ml-4 whitespace-nowrap rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              className="ml-4 whitespace-nowrap rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-5 py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
             >
               Post a Job →
             </Link>
@@ -131,7 +131,7 @@ export default async function EmployerDashboard() {
                 </p>
                 <Link
                   href="/dashboard/employer/post-job"
-                  className="mt-3 inline-block rounded-lg bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
+                  className="mt-3 inline-block rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-4 py-2 text-xs font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
                 >
                   Post Your First Job
                 </Link>

@@ -93,11 +93,11 @@ const sections = [
 export default function LegalIndexPage() {
   return (
     <div>
-      <div className="mb-8 border-b border-border pb-6">
-        <h1 className="font-heading text-3xl font-bold text-foreground mb-2">
+      <div className="mb-8 border-b border-neutral-100 pb-6">
+        <h1 className="font-heading text-3xl font-bold text-neutral-900 mb-2">
           Legal & Trust Centre
         </h1>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-neutral-500">
           LynxHire is built with privacy, AI governance, and legal compliance
           from day one. Governing law: Alberta, Canada.
         </p>
@@ -105,7 +105,7 @@ export default function LegalIndexPage() {
       <div className="space-y-10">
         {sections.map((section) => (
           <div key={section.title}>
-            <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-foreground mb-4">
+            <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-neutral-900 mb-4">
               {section.title}
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -113,24 +113,24 @@ export default function LegalIndexPage() {
                 <Link
                   key={page.href}
                   href={page.href}
-                  className="rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:bg-primary/5"
+                  className="bg-white border border-neutral-100 rounded-2xl p-4 shadow-sm transition-all hover:border-[#FF6B2B]/40 hover:bg-neutral-50/50"
                 >
-                  <p className="text-sm font-medium text-foreground mb-1">
+                  <p className="text-sm font-medium text-neutral-900 mb-1">
                     {page.title}
                   </p>
-                  <p className="text-xs text-muted-foreground">{page.desc}</p>
+                  <p className="text-xs text-neutral-500">{page.desc}</p>
                 </Link>
               ))}
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-10 border-t border-border pt-6">
-        <p className="text-xs text-muted-foreground">
+      <div className="mt-10 border-t border-neutral-100 pt-6">
+        <p className="text-xs text-neutral-500">
           Questions? Contact{" "}
           <a
             href="mailto:legal@lynxhire.ca"
-            className="text-primary hover:underline"
+            className="text-[#FF6B2B] hover:underline"
           >
             legal@lynxhire.ca
           </a>{" "}

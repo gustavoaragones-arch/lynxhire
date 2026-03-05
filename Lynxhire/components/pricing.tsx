@@ -34,7 +34,7 @@ const PricingCard = ({
           </div>
         </div>
 
-        <Button className="w-full py-4 px-6 bg-gray-900 text-white text-md font-medium shadow-sm hover:bg-gray-800 transition-colors">
+        <Button className="w-full py-4 px-6 text-md font-medium" variant="primary">
           Get Started
         </Button>
 

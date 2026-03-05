@@ -19,7 +19,7 @@ export default function EmployerOnboardingComplete() {
           </p>
           <Link
             href="/dashboard/employer"
-            className="block w-full py-3 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 transition-all"
+            className="block w-full py-3 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white font-medium rounded-xl text-sm shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
           >
             Go to Employer Dashboard →
           </Link>

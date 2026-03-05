@@ -36,7 +36,7 @@ export default function ForEmployersPage() {
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/auth/signup"
-              className="bg-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+              className="bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200">
               Post Your First Job Free
             </Link>
             <Link href="/pricing"
@@ -156,7 +156,7 @@ export default function ForEmployersPage() {
             Start free with 1 job posting. No credit card required.
           </p>
           <Link href="/auth/signup"
-            className="inline-block bg-neutral-900 text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+            className="inline-block bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-8 py-3 rounded-xl text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200">
             Get Started Free
           </Link>
         </div>

@@ -1,5 +1,5 @@
 // STYLE RULE: Never invent new styles. Always copy from existing template components.
-// Buttons: bg-neutral-900 text-white rounded-full (primary) | border border-neutral-200 rounded-full (secondary)
+// Buttons: gray-to-black gradient rounded-xl (primary) | border border-neutral-200 rounded-xl (secondary)
 // Orange: #FF6B2B only
 // Badge/pill: border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5
 // Cards: bg-white border border-neutral-100 rounded-2xl shadow-sm
@@ -125,7 +125,7 @@ export default function AboutPage() {
           <p className="text-neutral-500 mb-8">Join thousands of Canadian employers and job seekers.</p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/jobs"
-              className="bg-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium hover:bg-neutral-800 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.2)]">
+              className="bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-7 py-3 rounded-xl text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200">
               Browse Jobs
             </Link>
             <Link href="/contact"

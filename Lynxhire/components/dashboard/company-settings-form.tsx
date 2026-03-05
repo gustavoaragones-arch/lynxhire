@@ -132,7 +132,7 @@ export function CompanySettingsForm({ userId, initialCompany: c }: Props) {
       </div>
       {error && <p className="text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-lg px-4 py-3">{error}</p>}
       <div className="flex items-center gap-3 pb-6">
-        <button type="submit" disabled={saving} className="px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-xl text-sm hover:bg-primary/90 disabled:opacity-60 transition-all">
+        <button type="submit" disabled={saving} className="px-6 py-2.5 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white font-medium rounded-xl text-sm shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200">
           {saving ? "Saving..." : "Save Changes"}
         </button>
         {saved && <span className="text-sm text-green-600 font-medium">✓ Changes saved!</span>}

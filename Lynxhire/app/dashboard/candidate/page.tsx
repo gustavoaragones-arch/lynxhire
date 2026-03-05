@@ -89,7 +89,7 @@ export default async function CandidateDashboard() {
             </div>
             <Link
               href="/dashboard/candidate/profile"
-              className="ml-4 whitespace-nowrap rounded-lg bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              className="ml-4 whitespace-nowrap rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-4 py-2 text-xs font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
             >
               Complete Profile
             </Link>
@@ -119,7 +119,7 @@ export default async function CandidateDashboard() {
                 </p>
                 <Link
                   href="/dashboard/candidate/browse"
-                  className="mt-3 inline-block rounded-lg bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
+                  className="mt-3 inline-block rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-4 py-2 text-xs font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
                 >
                   Browse Jobs
                 </Link>

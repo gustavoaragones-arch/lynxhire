@@ -466,7 +466,7 @@ export function PostJobForm() {
           <button
             type="submit"
             disabled={loading}
-            className="flex-1 rounded-xl bg-primary py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-60"
+            className="flex-1 rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white py-3 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
           >
             {loading ? "Publishing..." : "Publish Job Posting"}
           </button>

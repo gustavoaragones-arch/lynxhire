@@ -45,7 +45,7 @@ export default async function SavedJobsPage() {
             </p>
             <Link
               href="/dashboard/candidate/browse"
-              className="inline-block rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              className="inline-block rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-5 py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
             >
               Browse Jobs
             </Link>

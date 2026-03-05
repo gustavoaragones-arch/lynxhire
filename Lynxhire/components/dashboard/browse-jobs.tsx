@@ -362,7 +362,7 @@ export function BrowseJobs() {
                     </button>
                     <Link
                       href={`/jobs/${job.id}`}
-                      className="rounded-lg bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90"
+                      className="rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-4 py-2 text-xs font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
                     >
                       View Job
                     </Link>

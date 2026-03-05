@@ -29,7 +29,7 @@ export function ApplyButton({
       <div className="flex items-center gap-3">
         <a
           href="/auth/signup"
-          className="rounded-xl bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+          className="rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-6 py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
         >
           Sign Up to Apply
         </a>
@@ -117,7 +117,7 @@ export function ApplyButton({
         <button
           type="button"
           onClick={() => setShowForm(true)}
-          className="rounded-xl bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+          className="rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-6 py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
         >
           Apply Now
         </button>
@@ -174,7 +174,7 @@ export function ApplyButton({
               type="button"
               onClick={handleApply}
               disabled={loading}
-              className="flex-1 rounded-xl bg-primary py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-60"
+              className="flex-1 rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white py-2.5 text-sm font-medium shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
             >
               {loading ? "Submitting..." : "Submit Application"}
             </button>

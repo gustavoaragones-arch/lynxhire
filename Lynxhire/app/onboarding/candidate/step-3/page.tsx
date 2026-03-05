@@ -202,7 +202,7 @@ export default function CandidateStep3() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 py-2.5 bg-primary text-primary-foreground font-medium rounded-lg text-sm hover:bg-primary/90 disabled:opacity-60 transition-all"
+                className="flex-1 py-2.5 bg-gradient-to-b from-neutral-700 to-neutral-900 text-white font-medium rounded-xl text-sm shadow-sm hover:from-neutral-800 hover:to-black disabled:opacity-60 transition-all duration-200"
               >
                 {loading ? "Saving..." : "Continue →"}
               </button>
