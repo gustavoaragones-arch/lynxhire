@@ -22,14 +22,16 @@ export default function PricingPage() {
     <main className="min-h-screen bg-white">
       <div className="max-w-5xl mx-auto px-4">
         {/* Hero */}
-        <div className="text-center pt-36 pb-10">
-          <div className="inline-flex items-center gap-2 border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5 mb-8">
+        <div className="text-center pt-32 pb-10">
+          <div className="border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5 mb-8 inline-flex">
             Pricing
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-4 tracking-tight">
-            Simple, <span className="text-[#FF6B2B]">transparent</span> pricing
-          </h1>
-          <p className="text-neutral-500 text-lg max-w-xl mx-auto">
+          <div className="max-w-6xl mx-auto mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 tracking-tight">
+              Simple, <span className="bg-gradient-to-b from-[rgba(255,167,86,1)] to-[rgba(238,96,44,1)] bg-clip-text text-transparent">transparent</span> pricing
+            </h1>
+          </div>
+          <p className="text-neutral-500 text-lg max-w-2xl mx-auto">
             No per-click fees. No hidden costs. One flat subscription for unlimited hiring potential.
           </p>
           <p className="text-sm text-neutral-400 mt-2">All prices in Canadian dollars (CAD) · Cancel anytime</p>

@@ -22,16 +22,16 @@ export default function ForEmployersPage() {
     <main className="min-h-screen bg-white">
 
       {/* Hero */}
-      <section className="pt-36 pb-24 px-4 text-center">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-center text-[#3D3D3D] text-[22px] font-semibold mb-8">
+      <section className="pt-32 pb-24 px-4 text-center">
+        <div className="max-w-6xl mx-auto">
+          <div className="border border-neutral-200 text-neutral-500 text-xs rounded-full px-4 py-1.5 mb-8 inline-flex">
             For Canadian Employers
-          </p>
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6 leading-tight tracking-tight">
             Hire faster with<br />
-            <span className="text-[#FF6B2B]">AI-powered matching</span>
+            <span className="bg-gradient-to-b from-[rgba(255,167,86,1)] to-[rgba(238,96,44,1)] bg-clip-text text-transparent">AI-powered matching</span>
           </h1>
-          <p className="text-neutral-500 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-neutral-500 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             Reduce resume spam for Canadian employers. LynxHire surfaces qualified talent with skills-based matching — ranked by AI match score.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
