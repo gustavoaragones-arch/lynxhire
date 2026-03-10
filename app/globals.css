@@ -12,12 +12,14 @@
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  /* Sidebar */
-  --sidebar-bg: #0b0c0e;
-  --sidebar-accent: #1e2126;
-  --sidebar-text: rgba(255, 255, 255, 0.7);
-  --sidebar-text-active: #ffffff;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
+  /* Sidebar (light grey) */
+  --sidebar: oklch(0.9846 0.0017 247.8389);
+  --sidebar-bg: oklch(0.9846 0.0017 247.8389);
+  --sidebar-accent: oklch(0.96 0.002 247);
+  --sidebar-foreground: #171717;
+  --sidebar-text: #404040;
+  --sidebar-text-active: #171717;
+  --sidebar-border: rgba(0, 0, 0, 0.08);
 
   /* AI highlight */
   --ai-highlight: #3dd6d0;
@@ -38,8 +40,11 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar: var(--sidebar);
   --color-sidebar-bg: var(--sidebar-bg);
   --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
   --color-ai-highlight: var(--ai-highlight);
   --font-family-heading: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
 }

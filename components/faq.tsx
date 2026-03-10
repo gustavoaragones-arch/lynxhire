@@ -6,20 +6,28 @@ import { IconPlus } from "@tabler/icons-react";
 const faqs = [
   {
     question: "How does LynxHire's AI matching work?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa vel ultrices commodo."
+    answer: "Our AI analyzes each candidate's skills, experience, location, work authorization, and salary expectations against your job requirements. Every applicant receives a 0–100 match score so you review the best fits first — not just whoever applied earliest."
   },
   {
     question: "What makes LynxHire different from Indeed or LinkedIn?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa vel ultrices commodo."
+    answer: "Indeed charges per click with no quality guarantee. LinkedIn is built for networking, not hiring. LynxHire is a flat monthly subscription built specifically for Canadian SMBs — with AI matching, a built-in ATS, and Canadian-first filters like province and work authorization status."
   },
   {
     question: "How much does it cost to post a job?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa vel ultrices commodo."
+    answer: "Your first job posting is free, forever. Paid plans start at $149/month CAD for up to 10 active postings with advanced AI matching. All prices are in Canadian dollars with no hidden fees or per-click charges."
   },
   {
     question: "Is LynxHire available across all Canadian provinces?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa vel ultrices commodo."
-  }
+    answer: "Yes. LynxHire supports job postings and candidate profiles across all 10 provinces and 3 territories. You can filter candidates by province and work authorization type (Canadian citizen, PR, open work permit, employer-specific permit)."
+  },
+  {
+    question: "Is my data protected under Canadian privacy law?",
+    answer: "Yes. LynxHire is fully compliant with PIPEDA, Canada's federal privacy law. All data is stored and processed in compliance with Canadian regulations. We never sell your data to third parties."
+  },
+  {
+    question: "Can candidates use LynxHire for free?",
+    answer: "Yes. LynxHire is always free for job seekers. Create your profile, apply to jobs, and get AI-matched to opportunities at no cost."
+  },
 ];
 
 export function FAQ() {

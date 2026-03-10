@@ -87,18 +87,13 @@ export function DashboardSidebar({ type }: SidebarProps) {
     <aside
       onMouseEnter={() => setExpanded(true)}
       onMouseLeave={() => setExpanded(false)}
-      className="fixed left-0 top-0 h-screen z-40 flex flex-col transition-all duration-300 ease-in-out"
+      className="fixed left-0 top-0 h-screen z-40 flex flex-col transition-all duration-300 ease-in-out w-64 bg-sidebar-bg border-r border-sidebar-border"
       style={{
         width: expanded ? "240px" : "64px",
-        backgroundColor: "var(--sidebar-bg)",
-        borderRight: "1px solid var(--sidebar-border)",
       }}
     >
       {/* Logo */}
-      <div
-        className="h-16 flex items-center px-4 overflow-hidden"
-        style={{ borderBottom: "1px solid var(--sidebar-border)" }}
-      >
+      <div className="h-16 flex items-center px-4 overflow-hidden border-b border-sidebar-border">
         {expanded ? (
           <LynxHireLogo variant="dark" />
         ) : (
@@ -118,23 +113,16 @@ export function DashboardSidebar({ type }: SidebarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all group"
-                style={{
-                  backgroundColor: isActive
-                    ? "var(--sidebar-accent)"
-                    : "transparent",
-                  color: isActive
-                    ? "var(--sidebar-text-active)"
-                    : "var(--sidebar-text)",
-                }}
+                className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                  isActive
+                    ? "bg-sidebar-accent text-sidebar-foreground font-medium"
+                    : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground"
+                }`}
                 title={!expanded ? item.label : undefined}
               >
                 <Icon
                   size={18}
-                  style={{
-                    color: isActive ? "var(--primary)" : "inherit",
-                    flexShrink: 0,
-                  }}
+                  className={isActive ? "text-primary flex-shrink-0" : "flex-shrink-0"}
                 />
                 {expanded && (
                   <span className="text-sm font-medium whitespace-nowrap transition-opacity duration-200">
@@ -148,16 +136,12 @@ export function DashboardSidebar({ type }: SidebarProps) {
       </nav>
 
       {/* Bottom nav */}
-      <div
-        className="py-4 px-2 space-y-1"
-        style={{ borderTop: "1px solid var(--sidebar-border)" }}
-      >
+      <div className="py-4 px-2 space-y-1 border-t border-sidebar-border">
         <Link
           href={`${basePath}/settings`}
-          className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all"
-          style={{ color: "var(--sidebar-text)" }}
+          className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors"
         >
-          <Settings size={18} style={{ flexShrink: 0 }} />
+          <Settings size={18} className="flex-shrink-0" />
           {expanded && (
             <span className="text-sm font-medium whitespace-nowrap">
               Settings
@@ -168,10 +152,9 @@ export function DashboardSidebar({ type }: SidebarProps) {
         {type === "employer" && (
           <Link
             href="/dashboard/employer/billing"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all"
-            style={{ color: "var(--sidebar-text)" }}
+            className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors"
           >
-            <CreditCard size={18} style={{ flexShrink: 0 }} />
+            <CreditCard size={18} className="flex-shrink-0" />
             {expanded && (
               <span className="text-sm font-medium whitespace-nowrap">
                 Billing
@@ -183,10 +166,9 @@ export function DashboardSidebar({ type }: SidebarProps) {
         <button
           type="button"
           onClick={handleLogout}
-          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all text-left"
-          style={{ color: "var(--sidebar-text)" }}
+          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground transition-colors text-left"
         >
-          <LogOut size={18} style={{ flexShrink: 0 }} />
+          <LogOut size={18} className="flex-shrink-0" />
           {expanded && (
             <span className="text-sm font-medium whitespace-nowrap">
               Log Out

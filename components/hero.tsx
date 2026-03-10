@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Button } from "./button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { IphoneMockup } from "./iphone-mockup";
-import Image from "next/image";
 export function Hero() {
   const parentRef = useRef<HTMLDivElement>(
     null
@@ -206,7 +205,7 @@ const MockScreen = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <span>Schedule</span>
+          <span>AI Match Results</span>
         </div>
         <div className="flex gap-2">
           <span> See all</span>
@@ -227,129 +226,18 @@ const MockScreen = () => {
         </div>
       </div>
 
-      <div className="w-full px-2 py-3">
-        <div className="bg-[#FAF0E6] rounded-xl p-2 w-full">
-          <div className="flex justify-between items-start">
-            <h3 className="text-[#5D4037] text-md font-medium">
-              Meeting with Kishore
-            </h3>
-            <button className="text-gray-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <p className="text-[#7B6B63] text-xs mt-1">8:00 AM - 9:00 AM</p>
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-col items-start mt-4 gap-1">
-              <div className="flex -space-x-2">
-                <Image
-                  src="/images/kishore_gunnam.jpg"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <Image
-                  src="/images/manu_arora.jpg"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <Image
-                  src="/images/person3.png"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <div className="w-8 h-8 rounded-full bg-[#E6D5CC] border-2 border-white flex items-center justify-center">
-                  <span className="text-xs text-[#7B6B63]">2+</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-[#7B6B63]">on Gmeet</span>
-              </div>
-            </div>
-            <span className="px-3 py-1 rounded-full bg-[#E6D5CC] text-sm text-[#7B6B63]">
-              Marketing
-            </span>
-          </div>
+      <div className="w-full px-2 py-2 space-y-2">
+        <div className="bg-[#FAF0E6] rounded-xl p-3 w-full">
+          <h3 className="text-[#5D4037] text-sm font-medium">Senior Developer · Vancouver, BC</h3>
+          <p className="text-[#7B6B63] text-xs mt-1">Match Score: 94%</p>
         </div>
-      </div>
-
-      <div className="w-full px-2 py-3">
-        <div className="bg-[#D3E7FF] rounded-xl p-2 w-full">
-          <div className="flex justify-between items-start">
-            <h3 className="text-[#5D4037] text-md font-medium">
-              Meeting with Manu
-            </h3>
-            <button className="text-gray-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM5 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <p className="text-[#7B6B63] text-xs mt-1">8:00 AM - 9:00 AM</p>
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-col items-start mt-4 gap-1">
-              <div className="flex -space-x-2">
-                <Image
-                  src="/images/kishore_gunnam.jpg"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <Image
-                  src="/images/manu_arora.jpg"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <Image
-                  src="/images/person3.png"
-                  alt=""
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  height={32}
-                  width={32}
-                />
-                <div className="w-8 h-8 rounded-full bg-[#E6D5CC] border-2 border-white flex items-center justify-center">
-                  <span className="text-xs text-[#7B6B63]">2+</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-[#7B6B63]">on Gmeet</span>
-              </div>
-            </div>
-            <span className="px-3 py-1 rounded-full bg-[#E6D5CC] text-sm text-[#7B6B63]">
-              Marketing
-            </span>
-          </div>
+        <div className="bg-[#FAF0E6] rounded-xl p-3 w-full">
+          <h3 className="text-[#5D4037] text-sm font-medium">Product Manager · Toronto, ON</h3>
+          <p className="text-[#7B6B63] text-xs mt-1">Match Score: 87%</p>
+        </div>
+        <div className="bg-[#D3E7FF] rounded-xl p-3 w-full">
+          <h3 className="text-[#5D4037] text-sm font-medium">UX Designer · Calgary, AB</h3>
+          <p className="text-[#7B6B63] text-xs mt-1">Match Score: 81%</p>
         </div>
       </div>
     </div>

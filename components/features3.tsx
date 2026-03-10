@@ -75,16 +75,15 @@ const ChatSection = () => {
   const messages: Message[] = [
     {
       role: "assistant",
-      content: "Hello, Nice",
+      content: "Role: Senior React Developer",
     },
     {
       role: "assistant",
-      content:
-        "Welcome to LiveChat I was made with Pick a topic from the list or type down a question!",
+      content: "Requirements: 3+ years React, TypeScript, remote-friendly",
     },
     {
       role: "user",
-      content: "Welcome",
+      content: "Generate",
     },
   ];
 
@@ -307,11 +306,11 @@ const TeamSection = () => {
           >
             <div>
               <span className="bg-gradient-to-b from-[#FFA756] to-[#EE602C] text-white px-3 py-1 rounded text-sm font-medium">
-                High
+                New Applicant
               </span>
-              <h4 className="text-sm font-semibold mt-3 mb-1">Research</h4>
+              <h4 className="text-sm font-semibold mt-3 mb-1">Sarah Chen — Frontend Developer</h4>
               <p className="text-gray-500 text-xs">
-                User research helps you to create an optimal product for users.
+                Match score 92% · Vancouver, BC · Canadian Citizen
               </p>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-5">
@@ -332,32 +331,7 @@ const TeamSection = () => {
                 />
               </div>
               <div className="flex items-center gap-4 text-gray-400 text-sm mt-2">
-                <span className="flex items-center gap-1.5 text-xs">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  10 comments
-                </span>
-                <span className="flex items-center gap-1.5 text-xs">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M12 20V10M18 20V4M6 20v-4" />
-                  </svg>
-                  3 files
-                </span>
+                <span className="flex items-center gap-1.5 text-xs">3 comments · Resume viewed</span>
               </div>
             </div>
           </motion.div>

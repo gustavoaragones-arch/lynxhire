@@ -599,23 +599,13 @@ const DashboardCard = () => {
           className="flex-shrink-0 bg-[#F9FAFB] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="flex items-center gap-4">
-            <div className="relative">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="rounded-full bg-gray-200 overflow-hidden ring-2 ring-white"
-              >
-                <Image
-                  src="/images/kishore_gunnam.jpg"
-                  alt="Kishore Gunnam Profile"
-                  width={56}
-                  height={56}
-                  className="w-14 h-14 object-cover hover:scale-105 transition-transform shrink-0"
-                />
-              </motion.div>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"
+            <div className="relative flex-shrink-0">
+              <Image
+                src="/logo-icon.png"
+                alt="LynxHire"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
               />
             </div>
             <motion.div
@@ -626,11 +616,12 @@ const DashboardCard = () => {
               className="space-y-1"
             >
               <div className="text-[10px] md:text-xs font-medium text-gray-400 tracking-wider">
-                DESIGNER ENGINEER
+                SENIOR DEVELOPER
               </div>
               <div className="text-xs md:text-lg font-semibold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                Kishore Gunnam
+                Alex Martin
               </div>
+              <div className="text-xs text-gray-500">LynxHire</div>
             </motion.div>
           </div>
         </motion.div>
@@ -670,7 +661,7 @@ const DashboardCard = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="text-sm"
             >
-              Select a conversation to start messaging
+              Your application has been reviewed
             </motion.div>
           </motion.div>
         </motion.div>
