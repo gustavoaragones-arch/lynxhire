@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
 import Link from "next/link";
-import { MapPin, Briefcase, DollarSign } from "lucide-react";
+import { MapPin, Briefcase, DollarSign, Bookmark } from "lucide-react";
 
 export default async function SavedJobsPage() {
   const supabase = await createClient();
@@ -35,7 +35,9 @@ export default async function SavedJobsPage() {
       <main className="max-w-3xl flex-1 p-6">
         {!savedJobs?.length ? (
           <div className="rounded-2xl border border-border bg-card p-12 text-center">
-            <p className="mb-3 text-4xl">🔖</p>
+            <div className="flex justify-center mb-3">
+              <Bookmark size={40} className="text-muted-foreground" />
+            </div>
             <p className="font-heading font-bold text-foreground mb-1">
               No saved jobs yet
             </p>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
-import { Send } from "lucide-react";
+import { Send, MessageSquare } from "lucide-react";
 
 interface Message {
   id: string;
@@ -115,7 +115,9 @@ export function Messaging({
   if (conversations.length === 0) {
     return (
       <div className="bg-card border border-border rounded-2xl p-12 text-center">
-        <p className="text-4xl mb-3">💬</p>
+        <div className="flex justify-center mb-3">
+          <MessageSquare size={40} className="text-muted-foreground" />
+        </div>
         <p className="font-heading font-bold text-foreground mb-1">
           No messages yet
         </p>

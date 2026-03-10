@@ -102,7 +102,7 @@ export function BillingClient({
     <div className="space-y-6">
       {searchParams.get("success") && (
         <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm font-medium">
-          🎉 Subscription activated! Welcome to{" "}
+          Subscription activated! Welcome to{" "}
           {currentPlan.charAt(0).toUpperCase() + currentPlan.slice(1)}.
         </div>
       )}

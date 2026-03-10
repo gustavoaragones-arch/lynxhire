@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect, notFound } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
 import Link from "next/link";
+import { Inbox } from "lucide-react";
 
 export default async function JobDetailPage({
   params,
@@ -123,7 +124,9 @@ export default async function JobDetailPage({
 
           {!applications?.length ? (
             <div className="py-10 text-center">
-              <p className="mb-2 text-3xl">📭</p>
+              <div className="flex justify-center mb-2">
+                <Inbox size={32} className="text-muted-foreground" />
+              </div>
               <p className="text-sm text-muted-foreground">
                 No applications yet. Share your job posting to get candidates!
               </p>

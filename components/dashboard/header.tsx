@@ -28,11 +28,11 @@ export async function DashboardHeader({ title, subtitle }: DashboardHeaderProps)
   return (
     <header className="h-16 flex items-center justify-between px-6 border-b border-border bg-background">
       <div>
-        <h1 className="font-heading font-bold text-foreground text-lg leading-tight">
+        <h1 className="text-xl font-semibold text-foreground">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-xs text-muted-foreground">{subtitle}</p>
+          <p className="text-sm text-muted-foreground">{subtitle}</p>
         )}
       </div>
 

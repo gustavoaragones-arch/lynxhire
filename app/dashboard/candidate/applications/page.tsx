@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
 import Link from "next/link";
+import { Inbox } from "lucide-react";
 
 export default async function ApplicationsPage() {
   const supabase = await createClient();
@@ -50,7 +51,9 @@ export default async function ApplicationsPage() {
       <main className="max-w-3xl flex-1 p-6">
         {!applications?.length ? (
           <div className="rounded-2xl border border-border bg-card p-12 text-center">
-            <p className="mb-3 text-4xl">📭</p>
+            <div className="flex justify-center mb-3">
+              <Inbox size={40} className="text-muted-foreground" />
+            </div>
             <p className="font-heading font-bold text-foreground mb-1">
               No applications yet
             </p>

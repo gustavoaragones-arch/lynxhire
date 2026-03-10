@@ -63,7 +63,7 @@ export function ApplyButton({
     return (
       <div className="flex items-center gap-3">
         <span className="rounded-xl bg-green-100 px-4 py-2.5 text-sm font-medium text-green-700">
-          🎉 Application submitted!
+          Application submitted!
         </span>
         <a
           href="/dashboard/candidate/applications"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { LynxHireLogo } from "@/components/logo";
 
 export default function EmployerOnboardingComplete() {
@@ -9,7 +10,9 @@ export default function EmployerOnboardingComplete() {
           <LynxHireLogo variant="light" />
         </div>
         <div className="bg-card border border-border rounded-2xl p-10 shadow-sm">
-          <div className="text-5xl mb-4">🚀</div>
+          <div className="flex justify-center mb-6">
+            <Image src="/logo-icon.png" alt="LynxHire" width={48} height={48} />
+          </div>
           <h1 className="font-heading text-2xl font-bold text-foreground mb-2">
             Company profile ready!
           </h1>

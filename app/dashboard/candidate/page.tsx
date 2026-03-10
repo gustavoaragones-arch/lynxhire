@@ -1,8 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
-import { StatCard } from "@/components/dashboard/stat-card";
 import Link from "next/link";
+import { FileText, Bookmark, Eye, MessageSquare } from "lucide-react";
 
 export default async function CandidateDashboard() {
   const supabase = await createClient();
@@ -59,21 +59,41 @@ export default async function CandidateDashboard() {
   return (
     <>
       <DashboardHeader
-        title={`Welcome back, ${firstName} 👋`}
+        title={`Welcome back, ${firstName}`}
         subtitle="Here's what's happening with your job search"
       />
 
       <main className="flex-1 space-y-6 p-6">
         {/* Stats */}
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <StatCard
-            icon="📋"
-            label="Applications Sent"
-            value={applicationCount ?? 0}
-          />
-          <StatCard icon="🔖" label="Saved Jobs" value={savedCount ?? 0} />
-          <StatCard icon="🎯" label="Profile Views" value="—" />
-          <StatCard icon="💬" label="Messages" value="0" accent />
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Applications Sent</span>
+              <FileText size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">{applicationCount ?? 0}</p>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Saved Jobs</span>
+              <Bookmark size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">{savedCount ?? 0}</p>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Profile Views</span>
+              <Eye size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">—</p>
+          </div>
+          <div className="bg-card border border-primary/30 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Messages</span>
+              <MessageSquare size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">0</p>
+          </div>
         </div>
 
         {/* Profile completeness */}
@@ -113,13 +133,12 @@ export default async function CandidateDashboard() {
 
             {!recentApplications?.length ? (
               <div className="py-10 text-center">
-                <p className="mb-2 text-3xl">📭</p>
                 <p className="text-sm text-muted-foreground">
                   No applications yet
                 </p>
                 <Link
                   href="/dashboard/candidate/browse"
-                  className="mt-3 inline-block rounded-xl bg-gradient-to-b from-neutral-700 to-neutral-900 text-white px-4 py-2 text-xs font-medium shadow-sm hover:from-neutral-800 hover:to-black transition-all duration-200"
+                  className="mt-3 inline-block bg-neutral-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all"
                 >
                   Browse Jobs
                 </Link>

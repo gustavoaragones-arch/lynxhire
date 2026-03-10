@@ -1,8 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
-import { StatCard } from "@/components/dashboard/stat-card";
 import Link from "next/link";
+import { FileText, Users, Clock, Star } from "lucide-react";
 
 export default async function EmployerDashboard() {
   const supabase = await createClient();
@@ -73,19 +73,34 @@ export default async function EmployerDashboard() {
       <main className="flex-1 space-y-6 p-6">
         {/* Stats */}
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <StatCard
-            icon="📋"
-            label="Active Job Postings"
-            value={activeJobsCount ?? 0}
-            accent
-          />
-          <StatCard
-            icon="👥"
-            label="Total Applications"
-            value={totalApplicationsCount ?? 0}
-          />
-          <StatCard icon="⏱️" label="Avg. Time to Hire" value="—" />
-          <StatCard icon="⭐" label="Match Quality" value="—" />
+          <div className="bg-card border border-primary/30 rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Active Job Postings</span>
+              <FileText size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">{activeJobsCount ?? 0}</p>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Total Applications</span>
+              <Users size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">{totalApplicationsCount ?? 0}</p>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Avg. Time to Hire</span>
+              <Clock size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">—</p>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-sm text-muted-foreground">Match Quality</span>
+              <Star size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-2xl font-semibold text-foreground">—</p>
+          </div>
         </div>
 
         {/* No jobs CTA */}
@@ -125,7 +140,6 @@ export default async function EmployerDashboard() {
 
             {!recentJobs?.length ? (
               <div className="py-10 text-center">
-                <p className="mb-2 text-3xl">📝</p>
                 <p className="text-sm text-muted-foreground">
                   No job postings yet
                 </p>
