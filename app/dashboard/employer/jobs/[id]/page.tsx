@@ -3,6 +3,7 @@ import { redirect, notFound } from "next/navigation";
 import { DashboardHeader } from "@/components/dashboard/header";
 import Link from "next/link";
 import { Inbox } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 export default async function JobDetailPage({
   params,
@@ -98,7 +99,8 @@ export default async function JobDetailPage({
                 <p className="text-sm font-medium text-foreground">
                   CAD $
                   {job.salary_min?.toLocaleString() ?? "—"} – $
-                  {job.salary_max?.toLocaleString() ?? "—"}/year
+                  {job.salary_max?.toLocaleString() ?? "—"}
+                  /{(job as { salary_type?: string }).salary_type === "hourly" ? "hour" : "year"}
                 </p>
               )}
             </div>
@@ -109,10 +111,8 @@ export default async function JobDetailPage({
             </span>
           </div>
 
-          <div className="prose prose-sm max-w-none text-foreground">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed">
-              {job.description}
-            </p>
+          <div className="prose prose-sm max-w-none text-foreground prose-headings:text-foreground prose-headings:font-semibold">
+            <ReactMarkdown>{job.description}</ReactMarkdown>
           </div>
         </div>
 

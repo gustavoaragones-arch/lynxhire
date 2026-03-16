@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import { ApplyButton } from "@/components/jobs/apply-button";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import {
   MapPin,
   Briefcase,
@@ -147,6 +148,7 @@ export default async function JobPage({
                     {job.salary_max
                       ? `–$${job.salary_max.toLocaleString()}`
                       : "+"}
+                    /{(job as { salary_type?: string }).salary_type === "hourly" ? "hr" : "yr"}
                   </span>
                 )}
               </div>
@@ -168,9 +170,9 @@ export default async function JobPage({
           <h2 className="font-heading font-bold text-foreground mb-4">
             About this role
           </h2>
-          <div className="whitespace-pre-wrap text-sm leading-relaxed text-foreground">
+          <ReactMarkdown className="prose prose-sm max-w-none text-foreground prose-headings:text-foreground prose-headings:font-semibold">
             {job.description}
-          </div>
+          </ReactMarkdown>
 
           {job.requirements && (
             <>

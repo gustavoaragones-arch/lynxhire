@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import { Sparkles, Loader2 } from "lucide-react";
+import { Sparkles, Loader2, Copy, Check } from "lucide-react";
 
 const CANADIAN_PROVINCES = [
   "Alberta",
@@ -55,6 +55,8 @@ export function PostJobForm() {
   const [aiLoading, setAiLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [aiBullets, setAiBullets] = useState("");
+  const [salaryType, setSalaryType] = useState<"annual" | "hourly">("annual");
+  const [copied, setCopied] = useState(false);
 
   const [form, setForm] = useState({
     title: "",
@@ -68,13 +70,23 @@ export function PostJobForm() {
     province: "",
     salary_min: "",
     salary_max: "",
+    salary_type: "annual" as "annual" | "hourly",
     experience_level: "mid" as (typeof EXPERIENCE_LEVELS)[number],
     industry: "",
   });
 
-  function set(field: string, value: string) {
+  function set(
+    field: string,
+    value: string | "annual" | "hourly"
+  ) {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(form.description);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   async function generateWithAI() {
     if (!form.title) {
@@ -167,6 +179,7 @@ export function PostJobForm() {
         province: form.province || null,
         salary_min: form.salary_min ? parseInt(form.salary_min, 10) : null,
         salary_max: form.salary_max ? parseInt(form.salary_max, 10) : null,
+        salary_type: form.salary_type,
         experience_level: form.experience_level,
         industry: form.industry,
         status: "active",
@@ -305,26 +318,59 @@ export function PostJobForm() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className={labelClass}>Salary Min (CAD)</label>
-              <input
-                type="number"
-                value={form.salary_min}
-                onChange={(e) => set("salary_min", e.target.value)}
-                placeholder="60000"
-                className={inputClass}
-              />
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <label className="text-sm font-medium text-foreground">
+                Salary Range (CAD)
+              </label>
+              <div className="flex rounded-lg border border-border overflow-hidden text-xs">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSalaryType("annual");
+                    set("salary_type", "annual");
+                  }}
+                  className={`px-3 py-1 transition-colors ${salaryType === "annual" ? "bg-foreground text-background" : "bg-background text-muted-foreground hover:bg-muted"}`}
+                >
+                  Annual
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSalaryType("hourly");
+                    set("salary_type", "hourly");
+                  }}
+                  className={`px-3 py-1 transition-colors ${salaryType === "hourly" ? "bg-foreground text-background" : "bg-background text-muted-foreground hover:bg-muted"}`}
+                >
+                  Hourly
+                </button>
+              </div>
             </div>
-            <div>
-              <label className={labelClass}>Salary Max (CAD)</label>
-              <input
-                type="number"
-                value={form.salary_max}
-                onChange={(e) => set("salary_max", e.target.value)}
-                placeholder="90000"
-                className={inputClass}
-              />
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs text-muted-foreground mb-1 block">
+                  Min {salaryType === "annual" ? "($/year)" : "($/hour)"}
+                </label>
+                <input
+                  type="number"
+                  value={form.salary_min}
+                  onChange={(e) => set("salary_min", e.target.value)}
+                  placeholder={salaryType === "annual" ? "80000" : "25"}
+                  className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background text-foreground"
+                />
+              </div>
+              <div>
+                <label className="text-xs text-muted-foreground mb-1 block">
+                  Max {salaryType === "annual" ? "($/year)" : "($/hour)"}
+                </label>
+                <input
+                  type="number"
+                  value={form.salary_max}
+                  onChange={(e) => set("salary_max", e.target.value)}
+                  placeholder={salaryType === "annual" ? "120000" : "45"}
+                  className="w-full border border-border rounded-lg px-3 py-2 text-sm bg-background text-foreground"
+                />
+              </div>
             </div>
           </div>
 
@@ -352,7 +398,7 @@ export function PostJobForm() {
             <h2 className="font-heading font-bold text-foreground">
               AI Job Description
             </h2>
-            <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full">
+            <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full border border-primary/20">
               Powered by Claude
             </span>
           </div>
@@ -377,7 +423,7 @@ export function PostJobForm() {
             type="button"
             onClick={generateWithAI}
             disabled={aiLoading}
-            className="flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all disabled:opacity-60"
+            className="flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all duration-200 disabled:opacity-60"
           >
             {aiLoading ? (
               <Loader2 size={14} className="animate-spin" />
@@ -394,14 +440,28 @@ export function PostJobForm() {
                 (edit the AI output or write your own)
               </span>
             </label>
-            <textarea
-              required
-              value={form.description}
-              onChange={(e) => set("description", e.target.value)}
-              rows={10}
-              placeholder="Describe the role, responsibilities, and ideal candidate..."
-              className={`${inputClass} resize-none`}
-            />
+            <div className="relative">
+              <button
+                type="button"
+                onClick={handleCopy}
+                className="absolute top-2 right-2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors z-10"
+                title="Copy to clipboard"
+              >
+                {copied ? (
+                  <Check size={14} className="text-primary" />
+                ) : (
+                  <Copy size={14} />
+                )}
+              </button>
+              <textarea
+                required
+                value={form.description}
+                onChange={(e) => set("description", e.target.value)}
+                rows={10}
+                placeholder="Describe the role, responsibilities, and ideal candidate..."
+                className={`${inputClass} resize-none pr-8`}
+              />
+            </div>
           </div>
         </div>
 

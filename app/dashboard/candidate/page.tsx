@@ -59,8 +59,8 @@ export default async function CandidateDashboard() {
   return (
     <>
       <DashboardHeader
-        title={`Welcome back, ${firstName}`}
-        subtitle="Here's what's happening with your job search"
+        title={`${profile?.full_name ?? "Your"} Dashboard`}
+        subtitle={`Welcome back, ${firstName}`}
       />
 
       <main className="flex-1 space-y-6 p-6">
