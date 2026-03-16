@@ -195,7 +195,7 @@ const MapView = () => {
 
   const people = [
     {
-      name: "Kishore",
+      name: "Faith",
       x: "10%",
       y: "4%",
       photo: "/images/kishore_gunnam.jpg",
@@ -207,7 +207,7 @@ const MapView = () => {
       photo: "/images/person3.png",
     },
     {
-      name: "Manu",
+      name: "Liam",
       x: "50%",
       y: "20%",
       photo: "/images/manu_arora.jpg",
@@ -303,7 +303,7 @@ const Chart = () => {
         >
           <div className="flex items-center gap-2">
             <div className="bg-[#103685] text-white px-4 py-1.5 rounded-lg text-sm cursor-none hover:opacity-90 transition-opacity border border-white/40 flex items-center gap-2 shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)] backdrop-blur-[6px] mix-blend-luminosity">
-              Manu
+              Liam
               <CursorIcon className="absolute -top-4 -right-4" />
             </div>
           </div>
@@ -319,7 +319,7 @@ const Chart = () => {
           <div className="flex items-center gap-2">
             <div className="bg-[#103685] relative text-white px-4 py-1.5 rounded-lg text-sm cursor-none hover:opacity-90 transition-opacity border border-white/40 flex items-center gap-2 shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)] backdrop-blur-[6px] mix-blend-luminosity">
               <CursorIcon className="scale-x-[-1] absolute -top-4 -left-4" />
-              Kishore
+              Faith
             </div>
           </div>
         </motion.div>

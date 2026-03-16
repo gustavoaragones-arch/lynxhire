@@ -111,23 +111,23 @@ export default function EmployerStep3() {
                     : "border-border bg-background hover:border-primary/30"
                 }`}
               >
-                {plan.popular && (
-                  <span className="absolute top-3 right-3 text-xs font-medium bg-primary text-primary-foreground px-2.5 py-0.5 rounded-full">
-                    Most Popular
-                  </span>
-                )}
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <span className="font-heading font-bold text-foreground text-lg">
-                      {plan.name}
+                <div className="relative">
+                  <div className="flex justify-between items-start mb-1">
+                    <h3 className="font-semibold text-foreground">{plan.name}</h3>
+                    <span className="text-sm font-semibold text-foreground">
+                      {plan.price}
                     </span>
-                    <p className="text-xs text-muted-foreground mt-0.5">
-                      {plan.description}
-                    </p>
                   </div>
-                  <span className="font-bold text-foreground text-sm">
-                    {plan.price}
-                  </span>
+                  {plan.popular && (
+                    <div className="mb-2">
+                      <span className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-0.5 rounded-full">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <p className="text-sm text-muted-foreground">
+                    {plan.description}
+                  </p>
                 </div>
                 <ul className="space-y-1">
                   {plan.features.map((f) => (

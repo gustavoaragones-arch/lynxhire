@@ -213,7 +213,7 @@ const MapView = () => {
 
   const people = [
     { 
-      name: "Kishore", 
+      name: "Faith", 
       x: "10%", 
       y: "4%",
       photo: "/images/kishore_gunnam.jpg"
@@ -225,7 +225,7 @@ const MapView = () => {
       photo: "/images/person3.png"
     },
     { 
-      name: "Manu", 
+      name: "Liam", 
       x: "50%", 
       y: "20%",
       photo: "/images/manu_arora.jpg"

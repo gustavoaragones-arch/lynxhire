@@ -348,17 +348,11 @@ export function PostJobForm() {
         {/* AI Description Generator */}
         <div className="space-y-4 rounded-2xl border border-border bg-card p-6">
           <div className="flex items-center gap-2">
-            <Sparkles size={18} style={{ color: "var(--ai-highlight)" }} />
+            <Sparkles size={18} className="text-primary" />
             <h2 className="font-heading font-bold text-foreground">
               AI Job Description
             </h2>
-            <span
-              className="rounded-full px-2 py-0.5 text-xs font-medium"
-              style={{
-                backgroundColor: "var(--ai-highlight)",
-                color: "var(--sidebar-bg)",
-              }}
-            >
+            <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-medium px-2.5 py-1 rounded-full">
               Powered by Claude
             </span>
           </div>
@@ -383,11 +377,7 @@ export function PostJobForm() {
             type="button"
             onClick={generateWithAI}
             disabled={aiLoading}
-            className="flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all disabled:opacity-60"
-            style={{
-              backgroundColor: "var(--ai-highlight)",
-              color: "var(--sidebar-bg)",
-            }}
+            className="flex items-center gap-2 bg-neutral-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-neutral-800 transition-all disabled:opacity-60"
           >
             {aiLoading ? (
               <Loader2 size={14} className="animate-spin" />
