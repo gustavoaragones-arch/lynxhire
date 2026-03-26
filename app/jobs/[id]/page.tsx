@@ -170,9 +170,9 @@ export default async function JobPage({
           <h2 className="font-heading font-bold text-foreground mb-4">
             About this role
           </h2>
-          <ReactMarkdown className="prose prose-sm max-w-none text-foreground prose-headings:text-foreground prose-headings:font-semibold">
-            {job.description}
-          </ReactMarkdown>
+          <div className="prose prose-sm max-w-none text-foreground prose-headings:text-foreground prose-headings:font-semibold prose-a:text-amber-500">
+            <ReactMarkdown>{job.description}</ReactMarkdown>
+          </div>
 
           {job.requirements && (
             <>
