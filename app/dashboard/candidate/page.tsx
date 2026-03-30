@@ -45,7 +45,8 @@ export default async function CandidateDashboard() {
     .order("created_at", { ascending: false })
     .limit(5);
 
-  const firstName = profile?.full_name?.split(" ")[0] ?? "there";
+  const displayName = profile?.full_name ?? user?.email?.split("@")[0] ?? "there";
+  const firstName = displayName.split(" ")[0];
 
   const statusColors: Record<string, string> = {
     new: "bg-blue-100 text-blue-700",
@@ -59,7 +60,7 @@ export default async function CandidateDashboard() {
   return (
     <>
       <DashboardHeader
-        title={`${profile?.full_name ?? "Your"} Dashboard`}
+        title={`${displayName}'s Dashboard`}
         subtitle={`Welcome back, ${firstName}`}
       />
 

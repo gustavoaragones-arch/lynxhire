@@ -54,7 +54,8 @@ export default async function EmployerDashboard() {
     .order("created_at", { ascending: false })
     .limit(5);
 
-  const firstName = profile?.full_name?.split(" ")[0] ?? "there";
+  const displayName = profile?.full_name ?? user.email?.split("@")[0] ?? "there";
+  const firstName = displayName.split(" ")[0];
 
   const statusBadge: Record<string, string> = {
     active: "bg-green-100 text-green-700",
@@ -66,7 +67,7 @@ export default async function EmployerDashboard() {
   return (
     <>
       <DashboardHeader
-        title={`${company?.name ?? "Your Company"} Dashboard`}
+        title={`${displayName}'s Dashboard`}
         subtitle={`Welcome back, ${firstName}`}
       />
 
